@@ -13,8 +13,14 @@ import { useSearchParams } from "next/navigation";
 import Filters from "../ui/Filters.tsx";
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 import RecallsByTypeChart from "../ui/charts/RecallsByTypeChart";
-import { Select, SelectItem, SelectTrigger, SelectValue } from "../ui/select";
-import { SelectContent } from "@radix-ui/react-select";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "../ui/select";
+
 import Treemap from "../ui/charts/TreeMap";
 import RecallsByComponentDonut from "../ui/charts/RecallsByComponentChart";
 import StackedAreaChart from "../ui/charts/StackedChart";
@@ -186,8 +192,8 @@ export default function Dashboard() {
                   <SelectValue placeholder="Selecciona un tipo de gráfico" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="bar">Barras Apiladas</SelectItem>
                   <SelectItem value="line">Líneas Apiladas</SelectItem>
+                  <SelectItem value="bar">Barras Apiladas</SelectItem>
                   <SelectItem value="area">Áreas Apiladas</SelectItem>
                 </SelectContent>
               </Select>
