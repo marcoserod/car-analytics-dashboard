@@ -193,8 +193,8 @@ export default function Dashboard() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="line">Líneas Apiladas</SelectItem>
-                  <SelectItem value="bar">Barras Apiladas</SelectItem>
                   <SelectItem value="area">Áreas Apiladas</SelectItem>
+                  <SelectItem value="bar">Barras Apiladas</SelectItem>
                 </SelectContent>
               </Select>
               {filteredData.length > 0 ? (
