@@ -35,7 +35,7 @@ const Treemap: React.FC<TreemapProps> = ({ data }) => {
       },
       tooltip: {
         pointFormat: `<b>{point.name}</b><br/>
-                      Unidades Afectadas: {point.value.toLocaleString()}<br/>
+                      Unidades Afectadas: {point.value}<br/>
                       Porcentaje del Total: {point.percentage:.2f}%`,
       },
       series: [
