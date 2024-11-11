@@ -111,64 +111,62 @@ export default function Dashboard() {
     <div className="p-4 md:p-8 space-y-8">
       <div className="sticky top-4 bg-white z-10 p-4 shadow-md rounded-md space-y-8">
         <Filters chartData={chartData} />
-        {/* KPIs */}
-        <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium">
-                Total Unidades Afectadas
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-xl md:text-2xl font-bold">
-                {TOTAL_UNITS_AFFECTED !== null
-                  ? TOTAL_UNITS_AFFECTED.toLocaleString()
-                  : "N/A"}
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium">
-                Promedio Unidades Afectadas
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-xl md:text-2xl font-bold">
-                {AVERAGE_UNITS_AFFECTED !== null
-                  ? AVERAGE_UNITS_AFFECTED.toLocaleString()
-                  : "N/A"}
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="text-sm font-medium">
-                Recall Más Frecuente
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-xl md:text-2xl font-bold">
-                {MOST_FREQUENT_RECALL_TYPE}
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-        <Card className="w-full">
+      </div>
+      {/* KPIs */}
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <Card>
           <CardHeader className="pb-2">
             <CardTitle className="text-sm font-medium">
-              Componente Más Frecuente
+              Total Unidades Afectadas
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-xl md:text-2xl font-bold">
-              {MOST_FREQUENT_COMPONENT !== null
-                ? MOST_FREQUENT_COMPONENT
+              {TOTAL_UNITS_AFFECTED !== null
+                ? TOTAL_UNITS_AFFECTED.toLocaleString()
                 : "N/A"}
             </div>
           </CardContent>
         </Card>
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium">
+              Promedio Unidades Afectadas
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-xl md:text-2xl font-bold">
+              {AVERAGE_UNITS_AFFECTED !== null
+                ? AVERAGE_UNITS_AFFECTED.toLocaleString()
+                : "N/A"}
+            </div>
+          </CardContent>
+        </Card>
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="text-sm font-medium">
+              Recall Más Frecuente
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="text-xl md:text-2xl font-bold">
+              {MOST_FREQUENT_RECALL_TYPE}
+            </div>
+          </CardContent>
+        </Card>
       </div>
+      <Card className="w-full">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-sm font-medium">
+            Componente Más Frecuente
+          </CardTitle>
+        </CardHeader>
+        <CardContent>
+          <div className="text-xl md:text-2xl font-bold">
+            {MOST_FREQUENT_COMPONENT !== null ? MOST_FREQUENT_COMPONENT : "N/A"}
+          </div>
+        </CardContent>
+      </Card>
 
       {/* Gráfico */}
       <div className="flex flex-wrap gap-4">
