@@ -108,7 +108,7 @@ export default function Dashboard() {
   }
 
   return (
-    <div className="p-4 md:p-8 space-y-8">
+    <div className="space-y-8">
       <div className="sticky top-4 bg-white z-10 p-4 shadow-md rounded-md space-y-8">
         <Filters chartData={chartData} />
       </div>
